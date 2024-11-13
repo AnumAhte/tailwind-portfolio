@@ -26,7 +26,7 @@ export default function Home() {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <Link href="/about" className="hover:text-purple-300">About</Link>
+            <Link href="#about" className="hover:text-purple-300">About</Link>
             <Link href="/skills" className="hover:text-purple-300">Skills</Link>
             <Link href="/projects" className="hover:text-purple-300">Projects</Link>
             <Link href="/contact" className="hover:text-purple-300">Contact</Link>
@@ -53,7 +53,7 @@ export default function Home() {
           } md:hidden bg-purple-600 text-white border-b-2 border-purple-800 transition duration-300 ease-in-out`}
         >
           <div className="flex flex-col p-4 space-y-4">
-            <Link href="/about" className="hover:text-purple-300" onClick={toggleMenu}>
+            <Link href="#about" className="hover:text-purple-300" onClick={toggleMenu}>
               About
             </Link>
             <Link href="/skills" className="hover:text-purple-300" onClick={toggleMenu}>
@@ -69,49 +69,48 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-black">
-          {/* Left: Text Section */}
-          <div className="flex-1 flex flex-col justify-center px-6 lg:px-24 py-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-purple-500">
-              Hi, I&rsquo;m Anum Ahtesham <span role="img" aria-label="wave">👋</span>
-            </h2>
-            <p className="text-lg text-gray-400 mb-6">
-              I design and develop experiences that make people&rsquo;s lives simpler through web and mobile apps.
+        <section id='about' className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-black">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-purple-600 mb-4">About Me</h2>
+            <p className="text-lg text-gray-400">
+              I am a passionate front-end developer with experience in building responsive and interactive web applications. My goal is to create user-friendly experiences while leveraging modern technologies.
             </p>
-            <Link href="/contact">
-              <button className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500">
-                Contact Me
-              </button>
-            </Link>
           </div>
 
-          {/* Right: Profile Image Section */}
-          <div className="flex-1 flex justify-center items-center">
-  
-   <Image
-   src="/profile2.jpg"
-   alt="Anum, Front-end Developer"
-   className="w-full max-w-xs h-auto rounded-lg shadow-lg border-4 border-purple-600"
-   width={300}
-   height={300}
-   priority
- />
- 
-</div>
 
+
+         
 
         </section>
+        <Link href="/">
+              <button className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500">
+                Go back to home
+              </button>
+            </Link>
 
-       
 
-       
 
-       
-        {/* Footer */}
-        <footer className="py-6 bg-purple-600 text-white text-center">
+
+
+         {/* Footer */}
+ <footer className="py-6 bg-purple-600 text-white text-center">
           <p>&copy; 2024 Anum. All rights reserved.</p>
         </footer>
-      </main>
-    </>
-  );
-}
+
+
+
+
+       
+
+
+
+
+
+
+
+
+
+
+
+        
+          </main></>)}

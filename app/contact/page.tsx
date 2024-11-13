@@ -29,7 +29,7 @@ export default function Home() {
             <Link href="/about" className="hover:text-purple-300">About</Link>
             <Link href="/skills" className="hover:text-purple-300">Skills</Link>
             <Link href="/projects" className="hover:text-purple-300">Projects</Link>
-            <Link href="/contact" className="hover:text-purple-300">Contact</Link>
+            <Link href="#contact" className="hover:text-purple-300">Contact</Link>
           </nav>
 
           {/* Hamburger Menu Button for Mobile */}
@@ -62,56 +62,35 @@ export default function Home() {
             <Link href="/projects" className="hover:text-purple-300" onClick={toggleMenu}>
               Projects
             </Link>
-            <Link href="/contact" className="hover:text-purple-300" onClick={toggleMenu}>
+            <Link href="#contact" className="hover:text-purple-300" onClick={toggleMenu}>
               Contact
             </Link>
           </div>
         </nav>
 
         {/* Hero Section */}
-        <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-black">
-          {/* Left: Text Section */}
-          <div className="flex-1 flex flex-col justify-center px-6 lg:px-24 py-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-purple-500">
-              Hi, I&rsquo;m Anum Ahtesham <span role="img" aria-label="wave">👋</span>
-            </h2>
-            <p className="text-lg text-gray-400 mb-6">
-              I design and develop experiences that make people&rsquo;s lives simpler through web and mobile apps.
-            </p>
-            <Link href="/contact">
-              <button className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500">
-                Contact Me
+         {/* Contact Section */}
+         <section id="contact" className="py-12 bg-black text-white">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-purple-600 mb-4">Contact Me</h2>
+            <form className="bg-gray-800 p-6 rounded-lg shadow-md">
+              <div className="mb-4">
+                <label className="block text-gray-400 mb-2" htmlFor="name">Name</label>
+                <input type="text" id="name" required className="w-full p-3 rounded bg-gray-700 text-white" />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400 mb-2" htmlFor="email">Email</label>
+                <input type="email" id="email" required className="w-full p-3 rounded bg-gray-700 text-white" />
+              </div>
+              <div className="mb-4">
+                <label className="block text-gray-400 mb-2" htmlFor="message">Message</label>
+                <textarea id="message" required className="w-full p-3 rounded bg-gray-700 text-white h-32" />
+              </div>
+              <button type="submit" className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500">
+                Send Message
               </button>
-            </Link>
+            </form>
           </div>
-
-          {/* Right: Profile Image Section */}
-          <div className="flex-1 flex justify-center items-center">
-  
-   <Image
-   src="/profile2.jpg"
-   alt="Anum, Front-end Developer"
-   className="w-full max-w-xs h-auto rounded-lg shadow-lg border-4 border-purple-600"
-   width={300}
-   height={300}
-   priority
- />
- 
-</div>
-
-
         </section>
 
-       
-
-       
-
-       
-        {/* Footer */}
-        <footer className="py-6 bg-purple-600 text-white text-center">
-          <p>&copy; 2024 Anum. All rights reserved.</p>
-        </footer>
-      </main>
-    </>
-  );
-}
+          </main></>)}

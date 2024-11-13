@@ -28,7 +28,7 @@ export default function Home() {
           <nav className="hidden md:flex space-x-8">
             <Link href="/about" className="hover:text-purple-300">About</Link>
             <Link href="/skills" className="hover:text-purple-300">Skills</Link>
-            <Link href="/projects" className="hover:text-purple-300">Projects</Link>
+            <Link href="#projects" className="hover:text-purple-300">Projects</Link>
             <Link href="/contact" className="hover:text-purple-300">Contact</Link>
           </nav>
 
@@ -59,7 +59,7 @@ export default function Home() {
             <Link href="/skills" className="hover:text-purple-300" onClick={toggleMenu}>
               Skills
             </Link>
-            <Link href="/projects" className="hover:text-purple-300" onClick={toggleMenu}>
+            <Link href="#projects" className="hover:text-purple-300" onClick={toggleMenu}>
               Projects
             </Link>
             <Link href="/contact" className="hover:text-purple-300" onClick={toggleMenu}>
@@ -69,49 +69,33 @@ export default function Home() {
         </nav>
 
         {/* Hero Section */}
-        <section className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-black">
-          {/* Left: Text Section */}
-          <div className="flex-1 flex flex-col justify-center px-6 lg:px-24 py-12">
-            <h2 className="text-4xl lg:text-5xl font-bold mb-4 text-purple-500">
-              Hi, I&rsquo;m Anum Ahtesham <span role="img" aria-label="wave">👋</span>
-            </h2>
-            <p className="text-lg text-gray-400 mb-6">
-              I design and develop experiences that make people&rsquo;s lives simpler through web and mobile apps.
-            </p>
-            <Link href="/contact">
+         {/* Projects Section */}
+         <section id='projects' className="flex flex-col lg:flex-row items-center justify-center min-h-screen bg-black">
+          <div className="max-w-6xl mx-auto px-6">
+            <h2 className="text-3xl font-bold text-purple-600 mb-4">Projects</h2>
+            <p className="text-lg text-gray-400 mb-4">Here are some of the projects I have worked on:</p>
+            <ul className="list-disc list-inside text-gray-400">
+              <li><strong>Project 1:</strong> CLI Calculator(npx 20basic_calculator )</li>
+              <li><strong>Project 2:</strong> CLI Number Guessing Game(npx 20num_guessing)</li>
+              <li><strong>Project 3:</strong> TODO-list(npx 20todo-list)</li>
+              <li><strong>Project 4:</strong> Atm Machine(npx 20atm_coding)</li>
+              <li><strong>Project 5:</strong> Currency-Converter(npx 20_currency)</li>
+            </ul>
+          </div>
+        </section>
+        <Link href="/">
               <button className="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-500">
-                Contact Me
+                Go back to home
               </button>
             </Link>
-          </div>
-
-          {/* Right: Profile Image Section */}
-          <div className="flex-1 flex justify-center items-center">
-  
-   <Image
-   src="/profile2.jpg"
-   alt="Anum, Front-end Developer"
-   className="w-full max-w-xs h-auto rounded-lg shadow-lg border-4 border-purple-600"
-   width={300}
-   height={300}
-   priority
- />
- 
-</div>
 
 
-        </section>
 
-       
 
-       
 
-       
-        {/* Footer */}
-        <footer className="py-6 bg-purple-600 text-white text-center">
+         {/* Footer */}
+ <footer className="py-6 bg-purple-600 text-white text-center">
           <p>&copy; 2024 Anum. All rights reserved.</p>
         </footer>
-      </main>
-    </>
-  );
-}
+
+          </main></>)}
